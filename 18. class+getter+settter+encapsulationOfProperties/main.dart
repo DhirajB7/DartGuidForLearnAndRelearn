@@ -1,5 +1,6 @@
 import 'Home.dart';
 import 'circle.dart';
+import 'objectToJsonUseingGet.dart';
 import 'rect.dart';
 
 void main() {
@@ -12,10 +13,14 @@ void main() {
   print(c.getRadius);
   print(c.getArea);
 
-  RectangleCustome r = RectangleCustome(len: 100, brt: 200);
+  RectangleCustome r = RectangleCustome(100, 200);
 
   print(r.area);
 
   Home h = Home("one", "one one one", 4);
   h.display();
+
+  Student student = Student("Dhiraj", "24 march", "0377");
+
+  print(student.studentDetailsInJson);
 }
