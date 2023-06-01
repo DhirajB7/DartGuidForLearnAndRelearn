@@ -5,9 +5,9 @@
 ///hidden rule --> while creating object use const keyword
 
 class Student {
-  final String? name;
-  final String? joiningDate;
-  final String? rollNumber;
+  final String name;
+  final String joiningDate;
+  final String rollNumber;
 
   const Student(
       {required this.name,
@@ -25,7 +25,7 @@ void main(List<String> args) {
 
   Student s2 = const Student(
       name: "Dhiraj", joiningDate: "24 march", rollNumber: "sq0377");
-  print("s1 ${s2.hashCode} ${s2.studentDetails}");
+  print("s2 ${s2.hashCode} ${s2.studentDetails}");
 
   Student s3 = const Student(
       name: "Dhiraj", joiningDate: "24 march", rollNumber: "sq377");

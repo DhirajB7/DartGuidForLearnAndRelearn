@@ -1,7 +1,7 @@
 class Student {
-  int? age;
-  String? name;
-  String? email;
+  int age;
+  String name;
+  String email;
 
   Student({required this.age, required this.name, required this.email});
 
@@ -66,7 +66,7 @@ void main() {
   Map<String, Student> contactMap = {};
 
   listOfStudents.forEach((element) {
-    contactMap[element.email ?? "no data"] = element;
+    contactMap[element.email] = element;
   });
 
   contactMap.forEach((key, value) {

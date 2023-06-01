@@ -1,7 +1,8 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 class Student {
-  int? age;
-  String? name;
-  String? email;
+  int age;
+  String name;
+  String email;
 
   Student({required this.age, required this.name, required this.email});
 
