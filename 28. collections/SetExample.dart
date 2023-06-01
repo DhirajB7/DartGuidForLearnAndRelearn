@@ -1,5 +1,3 @@
-
-
 class Student {
   int? age;
   String? name;
@@ -9,6 +7,23 @@ class Student {
 
   void get detail => print(
       "Student's name is $name, age $age years old & contact information is $email .");
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is Student &&
+          runtimeType == other.runtimeType &&
+          age == other.age &&
+          name == other.name &&
+          email == other.email;
+
+  @override
+  int get hashCode => age.hashCode ^ name.hashCode ^ email.hashCode;
+
+  @override
+  String toString() {
+    return 'Student{age: $age, name: $name, email: $email}';
+  }
 }
 
 void main() {
@@ -28,19 +43,18 @@ void main() {
 
   Set<Student> listOfStudents = {};
 
-  listOfStudents.add(Student(age: 32, name: "Dhiraj", email: "Dhiraj.Dhiraj@gmail.com"));
-  listOfStudents.add(Student(age: 32, name: "Dhiraj", email: "Dhiraj.Dhiraj@gmail.com"));
-  listOfStudents.add(Student(age: 32, name: "Dhiraj", email: "Dhiraj.Dhiraj@gmail.com"));
-  listOfStudents.add(Student(age: 32, name: "Dhiraj", email: "Dhiraj.Dhiraj@gmail.com"));
-  listOfStudents.add(Student(age: 32, name: "Dhira", email: "Dhiraj.Dhiraj@gmail.com"));
-  
+  listOfStudents
+      .add(Student(age: 32, name: "Dhiraj", email: "Dhiraj.Dhiraj@gmail.com"));
+  listOfStudents
+      .add(Student(age: 32, name: "Dhiraj", email: "Dhiraj.Dhiraj@gmail.com"));
+  listOfStudents
+      .add(Student(age: 32, name: "Dhiraj", email: "Dhiraj.Dhiraj@gmail.com"));
+  listOfStudents
+      .add(Student(age: 32, name: "Dhiraj", email: "Dhiraj.Dhiraj@gmail.com"));
+  listOfStudents
+      .add(Student(age: 32, name: "Dhira", email: "Dhiraj.Dhiraj@gmail.com"));
 
   for (Student student in listOfStudents) {
-
     student.detail;
-    
   }
-
-
-
 }
