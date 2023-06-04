@@ -26,6 +26,7 @@ class Student{
 
   @override
   int get hashCode => age.hashCode ^ name.hashCode ^ email.hashCode;
+  
 }
 
 

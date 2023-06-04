@@ -1,6 +1,7 @@
+import 'Automobile.dart';
 import 'Vehical.dart';
 
-class Car implements Vehical {
+class Car implements Vehical,Automobile {
   @override
   String? color;
 
